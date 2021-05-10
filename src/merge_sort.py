@@ -1,11 +1,11 @@
 import math
 def merge_sort(unsorted):
     length = len(unsorted)
-    if length<=1: return unsorted
+    if length <= 1: return unsorted
 
-    if length>2:
+    if length > 2:
         unsorted_half1, unsorted_half2 = divide(unsorted)
-        return merge(merge_sort(unsorted_half1),merge_sort(unsorted_half2))
+        return merge(merge_sort(unsorted_half1), merge_sort(unsorted_half2))
 
     #if this line is reached so unsorted length must = 2
     if unsorted[0] > unsorted[1]:
@@ -36,4 +36,4 @@ def merge(sorted_half1, sorted_half2):
     return _sorted
 
 #test case
-print(merge_sort([1 ,3 , 2]))
+print(merge_sort([1, 3, 2]))
