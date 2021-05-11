@@ -19,7 +19,7 @@ class SelectionSort:
             self.arr[i], self.arr[min_index] = self.arr[min_index], self.arr[i]
 
 
-# arr = [random.randrange(1, 1000000, 1) for i in range(500000)]
+arr = [random.randrange(1, 1000000, 1) for i in range(500000)]
 arr = [2, 1, -1, 8, 6, 6, 99, 30, 10, 7, 44, 99, 4]
 ss = SelectionSort(arr)
 print(ss.sort())
