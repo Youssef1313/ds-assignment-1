@@ -6,8 +6,8 @@
 
 1. You're required to implement:
 
-    - Three O(n<sup>2</sup>) algorithms (selection sort, bubble sort, and insertion sort)
-    - Three O(nlogn) algorithms (merge sort, quick sort, and heap sort)
+    - Three O(n<sup>2</sup>) algorithms (selection sort, bubble sort, and insertion sort).
+    - Three O(nlogn) algorithms (merge sort, quick sort, and heap sort).
 
 2. You're required to compare the running time performance of your algorithms against each other.
 
@@ -31,4 +31,3 @@ A graph is required between time vs array length for the different algorithms an
     - Pseudo code for each algorithm.
     - Sample runs.
     - Graph described earlier.
-    
