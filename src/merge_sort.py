@@ -3,14 +3,8 @@ def merge_sort(unsorted):
     if length <= 1:
         return unsorted
 
-    if length > 2:
-        unsorted_half1, unsorted_half2 = divide(unsorted)
-        return merge(merge_sort(unsorted_half1), merge_sort(unsorted_half2))
-
-    # if this line is reached so unsorted list length must = 2
-    if unsorted[0] > unsorted[1]:
-        unsorted[0], unsorted[1] = unsorted[1], unsorted[0]
-    return unsorted
+    unsorted_half1, unsorted_half2 = divide(unsorted)
+    return merge(merge_sort(unsorted_half1), merge_sort(unsorted_half2))
 
 
 def divide(unsorted):
