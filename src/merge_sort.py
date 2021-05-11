@@ -1,6 +1,3 @@
-import math
-
-
 def merge_sort(unsorted):
     length = len(unsorted)
     if length <= 1:
