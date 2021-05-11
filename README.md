@@ -1,4 +1,4 @@
-# Data structure II - Assignment 1
+# Data structures II - Assignment 1
 
 **Goal:** understand different running times for each algorithm, best and worst-case running times.
 
