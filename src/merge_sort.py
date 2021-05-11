@@ -8,8 +8,8 @@ def merge_sort(unsorted):
 
 
 def divide(unsorted):
-    half_i = math.ceil(len(unsorted) / 2)
-    return unsorted[:half_i-1], unsorted[half_i-1:]
+    half_i = len(unsorted) // 2
+    return unsorted[:half_i], unsorted[half_i:]
 
 
 def merge(sorted_half1, sorted_half2):
