@@ -6,7 +6,7 @@ def bubble_sort(unsorted):
             if unsorted[j] > unsorted[j + 1]:
                 unsorted[j], unsorted[j + 1] = unsorted[j + 1], unsorted[j]
                 madeAnySwaps = True
-        
+
         if not madeAnySwaps:
             break
 
