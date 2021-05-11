@@ -1,30 +1,24 @@
 import random
-import time
+from abc import abstractmethod
 
 
-class QuickSortLP:
-    def __init__(self, arr):
-        self.arr = arr
+class QuickSort:
 
     def sort(self):
-        start: float = time.process_time()
-        self.__quick_sort_last_piviot(0, len(self.arr))
-        end: float = time.process_time()
-        print(end-start)
+        self.__quick_sort(0, len(self.arr))
         return self.arr
 
-    def __quick_sort_last_piviot(self, first, last):
+    def __quick_sort(self, first, last):
         if first >= last:
             return
-        p: int = self.__partition_last_piviot(first, last - 1)
-        self.__quick_sort_last_piviot(first, p)
-        self.__quick_sort_last_piviot(p + 1, last)
+        p: int = self.__partition(first, last - 1)
+        self.__quick_sort(first, p)
+        self.__quick_sort(p + 1, last)
 
-    def __partition_last_piviot(self, first, last):
+    def __partition(self, first, last):
         i: int = first - 1
         j: int = first
-        piv: int = self.arr[last]
-
+        piv: int = self.__get_piviot(first, last)
         while i < (last) and j < (last):
             if self.arr[j] < piv:
                 i += 1
@@ -33,44 +27,32 @@ class QuickSortLP:
         self.arr[i + 1], self.arr[last] = self.arr[last], self.arr[i + 1]
         return i+1
 
+    @abstractmethod
+    def __get_piviot(self, first, last):
+        pass
 
-class QuickSortRP:
+
+class QuickSortLP(QuickSort):
     def __init__(self, arr):
         self.arr = arr
 
-    def sort(self):
-        start: float = time.process_time()
-        self.__quick_sort_random_piviot(0, len(self.arr))
-        end: float = time.process_time()
-        print(end-start)
-        return self.arr
+    def __get_piviot(self, first, last):
+        return self.arr[last]
 
-    def __quick_sort_random_piviot(self, first, last):
-        if first >= last:
-            return
-        p: int = self.__partition_random_piviot(first, last - 1)
-        self.__quick_sort_random_piviot(first, p)
-        self.__quick_sort_random_piviot(p + 1, last)
 
-    def __partition_random_piviot(self, first, last):
+class QuickSortRP(QuickSort):
+    def __init__(self, arr):
+        self.arr = arr
+
+    def __get_piviot(self, first, last):
         rand: int = random.randint(first, last)
-        i: int = first - 1
-        j: int = first
-        piv: int = self.arr[rand]
-
-        while i < (last) and j < (last):
-            if self.arr[j] < piv:
-                i += 1
-                self.arr[i], self.arr[j] = self.arr[j], self.arr[i]
-            j += 1
-        self.arr[i + 1], self.arr[rand] = self.arr[rand], self.arr[i + 1]
-        return i+1
+        return self.arr[rand]
 
 
-arr = [random.randrange(1, 1000000, 1) for i in range(500000)]
+# arr = [random.randrange(1, 1000000, 1) for i in range(500000)]
+arr = [2, 1, -1, 8, 6, 6, 99, 30, 10, 7, 44, 99, 4]
+
 q1 = QuickSortLP(arr)
 q2 = QuickSortRP(arr)
-q1.sort()
-q2.sort()
-# print(q1.sort())
-# print(q2.sort())
+print(q1.sort())
+print(q2.sort())
