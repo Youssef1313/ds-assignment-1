@@ -25,7 +25,7 @@ class QuickSort():
                 self.arr[i], self.arr[j] = self.arr[j], self.arr[i]
             j += 1
         self.arr[i + 1], self.arr[last] = self.arr[last], self.arr[i + 1]
-        return i+1
+        return i + 1
 
     @abstractmethod
     def _get_pivot(self, first, last):
