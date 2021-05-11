@@ -1,4 +1,5 @@
 import random
+from abc import abstractmethod
 
 
 class QuickSort:
@@ -14,15 +15,10 @@ class QuickSort:
         self.__quick_sort(first, p)
         self.__quick_sort(p + 1, last)
 
-
-class QuickSortLP(QuickSort):
-    def __init__(self, arr):
-        self.arr = arr
-
     def __partition(self, first, last):
         i: int = first - 1
         j: int = first
-        piv: int = self.arr[last]
+        piv: int = self.__get_piviot(first, last)
 
         while i < (last) and j < (last):
             if self.arr[j] < piv:
@@ -32,24 +28,26 @@ class QuickSortLP(QuickSort):
         self.arr[i + 1], self.arr[last] = self.arr[last], self.arr[i + 1]
         return i+1
 
+    @abstractmethod
+    def __get_piviot(self, first, last):
+        pass
+
+
+class QuickSortLP(QuickSort):
+    def __init__(self, arr):
+        self.arr = arr
+
+    def __get_piviot(self, first, last):
+        return self.arr[last]
+
 
 class QuickSortRP(QuickSort):
     def __init__(self, arr):
         self.arr = arr
 
-    def __partition(self, first, last):
+    def __get_piviot(self, first, last):
         rand: int = random.randint(first, last)
-        i: int = first - 1
-        j: int = first
-        piv: int = self.arr[rand]
-
-        while i < (last) and j < (last):
-            if self.arr[j] < piv:
-                i += 1
-                self.arr[i], self.arr[j] = self.arr[j], self.arr[i]
-            j += 1
-        self.arr[i + 1], self.arr[rand] = self.arr[rand], self.arr[i + 1]
-        return i+1
+        return self.arr[rand]
 
 
 # arr = [random.randrange(1, 1000000, 1) for i in range(500000)]
