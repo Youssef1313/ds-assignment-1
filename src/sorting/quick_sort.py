@@ -55,17 +55,3 @@ q1 = QuickSortLP(arr)
 q2 = QuickSortRP(arr)
 print(q1.sort())
 print(q2.sort())
-
-
-
-
-
-
-
-
-
-
-
-
-
-
