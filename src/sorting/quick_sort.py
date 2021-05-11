@@ -1,5 +1,4 @@
 import random
-from abc import abstractmethod
 
 
 class QuickSort:
@@ -14,10 +13,6 @@ class QuickSort:
         p: int = self.__partition(first, last - 1)
         self.__quick_sort(first, p)
         self.__quick_sort(p + 1, last)
-
-    # @abstractmethod
-    # def __partition(self, first, last):
-    #     pass
 
 
 class QuickSortLP(QuickSort):
