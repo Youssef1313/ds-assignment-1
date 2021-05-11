@@ -15,6 +15,11 @@ def test_list_containing_none():
     assert True  # TODO: Test against the 6 algorithms.
 
 
+def test_list_containing_string():
+    input = [1, "Hello world", 5]  # noqa: F841
+    assert True  # TODO: Test against the 6 algorithms.
+
+
 def test_empty_list():
     input = []  # noqa: F841
     assert True  # TODO: Test against the 6 algorithms.
