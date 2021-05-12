@@ -1,4 +1,4 @@
-def sort(arr):
+def selection_sort(unsorted):
     arr_len = len(arr)
     for i in range(arr_len):
         min_index = i
