@@ -9,6 +9,7 @@ def insertion_sort(unsorted):
 
         unsorted[hole] = key
 
+
 list = [1, 3, 2, 5, 4, 8, 7, 6]
 insertion_sort(list)
 print(list)
