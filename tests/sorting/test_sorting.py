@@ -4,6 +4,8 @@ from src.sorting.heap_sort import heap_sort
 from src.sorting.insertion_sort import insertion_sort
 from src.sorting.merge_sort import merge_sort
 from src.sorting.selection_sort import selection_sort
+from src.sorting.quick_sort import quick_sort_last_pivot
+from src.sorting.quick_sort import quick_sort_random_pivot
 
 
 def test_none(sort_algorithm):
@@ -71,6 +73,8 @@ def test_sorting1(sort_algorithm):
     insertion_sort,
     merge_sort,
     selection_sort,
+    quick_sort_last_pivot,
+    quick_sort_random_pivot
     ])
 def sort_algorithm(request):
     return request.param
