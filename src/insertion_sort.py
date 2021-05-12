@@ -8,7 +8,8 @@ def insertion_sort(unsorted):
             unsorted[i] = unsorted[i - 1]
             i -= 1
         unsorted[j] = num
-    return unsorted
 
 
-print(insertion_sort([1, 3, 2, 5, 4, 8, 7, 6]))
+list = [1, 3, 2, 5, 4, 8, 7, 6]
+insertion_sort(list)
+print(list)
