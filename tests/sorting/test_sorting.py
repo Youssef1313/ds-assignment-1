@@ -1,6 +1,9 @@
 import pytest
-from src.sorting import bubble_sort, heap_sort, insertion_sort
-from src.sorting import merge_sort, selection_sort
+from src.sorting.bubble_sort import bubble_sort
+from src.sorting.heap_sort import heap_sort
+from src.sorting.insertion_sort import insertion_sort
+from src.sorting.merge_sort import merge_sort
+from src.sorting.selection_sort import selection_sort
 
 
 def test_none(sort_algorithm):
@@ -63,11 +66,11 @@ def test_sorting1(sort_algorithm):
 
 
 @pytest.fixture(params=[
-    bubble_sort.bubble_sort,
-    heap_sort.heap_sort,
-    insertion_sort.insertion_sort,
-    merge_sort.merge_sort,
-    selection_sort.selection_sort,
+    bubble_sort,
+    heap_sort,
+    insertion_sort,
+    merge_sort,
+    selection_sort,
     ])
 def sort_algorithm(request):
     return request.param
