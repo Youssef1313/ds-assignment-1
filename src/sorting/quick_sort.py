@@ -18,7 +18,10 @@ class QuickSort():
     def __partition(self, first, last):
         i: int = first - 1
         j: int = first
-        piv: int = self._get_pivot(first, last)
+        piv_ind = self._get_pivot(first, last)
+        piv = piv_ind[0]
+        ind = piv_ind[1]
+        self.arr[ind], self.arr[last] = self.arr[last], self.arr[ind]
         while i < (last) and j < (last):
             if self.arr[j] < piv:
                 i += 1
@@ -37,7 +40,7 @@ class QuickSortLP(QuickSort):
         self.arr = arr
 
     def _get_pivot(self, first, last):
-        return self.arr[last]
+        return self.arr[last], last
 
 
 class QuickSortRP(QuickSort):
@@ -46,11 +49,11 @@ class QuickSortRP(QuickSort):
 
     def _get_pivot(self, first, last):
         rand: int = random.randint(first, last)
-        return self.arr[rand]
+        return self.arr[rand], rand
 
 
 # arr = [random.randrange(1, 1000000, 1) for i in range(500000)]
-arr = [2, 1, -1, 8, 6, 6, 99, 30, 10, 7, 44, 99, 4]
+arr = [5, 3.1, 3, 5.5, 1, 2.1, 3.0, 1]
 q1 = QuickSortLP(arr)
 q2 = QuickSortRP(arr)
 print(q1.sort())
