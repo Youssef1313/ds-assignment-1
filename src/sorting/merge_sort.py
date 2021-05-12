@@ -3,6 +3,7 @@ def merge_sort(unsorted):
         return unsorted
 
     unsorted_half1, unsorted_half2 = divide(unsorted)
+
     return merge(merge_sort(unsorted_half1),
                  merge_sort(unsorted_half2),
                  unsorted)
@@ -11,6 +12,7 @@ def merge_sort(unsorted):
 def divide(unsorted):
     half_i = len(unsorted) // 2
     return unsorted[:half_i], unsorted[half_i:]
+
 
 
 def merge(sorted_half1, sorted_half2, unsorted):
