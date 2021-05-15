@@ -2,7 +2,7 @@ from matplotlib import pyplot as plt
 import numpy as np
 
 """
-recomended to use Anaconda Environment --> Spyder or jupyter
+Recommended to use Anaconda Environment (Spyder or Jupyter)
 when running this script.
 """
 
