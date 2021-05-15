@@ -22,8 +22,3 @@ def heapify(arr, length, i):
     if i != maximum_index:
         arr[i], arr[maximum_index] = arr[maximum_index], arr[i]
         heapify(arr, length, maximum_index)
-
-
-arr = [5, 3, 9, 4, 6, 8, 1, 0, 5, 6, 8, 9, 13, 19, 16, 46]
-heap_sort(arr)
-print(arr)
