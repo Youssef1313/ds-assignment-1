@@ -11,7 +11,7 @@ def get_times(list_length):
         time_in_seconds = timeit.timeit(
             setup=f"from sorting.{algorithm[0]} import {algorithm[1]}",
             stmt=f"{algorithm[1]}({unsorted})",
-            number=100)
+            number=1)
         algorithm[2].append(time_in_seconds)
 
 
