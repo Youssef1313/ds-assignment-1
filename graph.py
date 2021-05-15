@@ -63,7 +63,7 @@ plt.plot(x, np.array([2.980000000002425e-05,
                       0.04861139999999997,
                       4.801655199999999,
                       668.9253484000001]),
-         label='selection_sort')
+         label='Selection sort')
 
 fig = plt.gcf()
 fig.set_size_inches(10, 10)
