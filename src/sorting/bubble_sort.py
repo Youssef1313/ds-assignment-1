@@ -1,3 +1,5 @@
+import numpy as np
+
 def bubble_sort(unsorted):
     length = len(unsorted)
     for i in range(length):
