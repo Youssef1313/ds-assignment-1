@@ -69,3 +69,4 @@ plt.plot(x, np.array([2.980000000002425e-05,
 fig = plt.gcf()
 fig.set_size_inches(10, 10)
 plt.legend(bbox_to_anchor=(1, 1))
+plt.show()
