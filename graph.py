@@ -49,7 +49,7 @@ plt.plot(x, np.array([0.0001516000000000295,
                       0.008095799999999986,
                       0.09926670000000115,
                       1.1763576000003013]),
-         label='quick_sort_last_pivot')
+         label='Quick sort (last pivot)')
 
 plt.plot(x, np.array([0.00020999999999998797,
                       0.0010640000000000094,
