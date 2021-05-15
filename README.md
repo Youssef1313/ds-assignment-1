@@ -31,3 +31,20 @@ A graph is required between time vs array length for the different algorithms an
     - Pseudo code for each algorithm.
     - Sample runs.
     - Graph described earlier.
+
+## Begin local development
+
+To start developing/running locally:
+
+1. Make sure you have Python 3.9 and VSCode installed.
+2. Run the following commands in the root of the repository:
+
+    ```
+    python -m pip install --upgrade pip
+    pip install -r dependencies/dev_requirements.txt
+    ```
+
+    This will install the required development dependencies (flake8, pytest, and pep8-naming). Those dependencies are defined in [dev_requirements.txt](dependencies/dev_requirements.txt).
+
+3. Run `pytest` in the root of the repository, you should see all unit tests passing.
+4. Open the directory in VSCode and enjoy!
