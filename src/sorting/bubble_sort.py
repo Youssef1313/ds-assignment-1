@@ -9,8 +9,3 @@ def bubble_sort(unsorted):
 
         if not made_swaps:
             break
-
-
-arr = [64, 34, 25, 12, 22, 11, 90]
-bubble_sort(arr)
-print(arr)

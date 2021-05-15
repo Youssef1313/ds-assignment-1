@@ -27,9 +27,3 @@ def merge(sorted_half1, sorted_half2, unsorted):
         k += 1
 
     unsorted[k:] = sorted_half1[i:] if i != half1_length else sorted_half2[j:]
-
-
-# test case
-list1 = [1, 3, 2, 5, 4]
-merge_sort(list1)
-print(list1)

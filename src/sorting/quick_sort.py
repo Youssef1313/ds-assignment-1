@@ -40,9 +40,3 @@ def __get_pivot_last(arr, first, last):
 def __get_pivot_random(arr, first, last):
     rand: int = random.randint(first, last)
     return arr[rand], rand
-
-
-# arr = [random.randrange(1, 1000000, 1) for i in range(500000)]
-arr = [5, 3.1, 3, 5.5, 1, 2.1, 3.0, 1]
-q1 = quick_sort_random_pivot(arr)
-print(arr)
