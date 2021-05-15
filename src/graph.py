@@ -12,7 +12,8 @@ plt.yscale("log")
 plt.xscale("log")
 
 """
-Algorithms running times were obtained from running `benchmarks.py` script which is expensive,
+Algorithms running times were obtained
+from running `benchmarks.py` script which is expensive,
 so data from a sample run are hard-coded to be graphed using Matplotlib.
 """
 
