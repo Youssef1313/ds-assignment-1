@@ -12,8 +12,8 @@ plt.yscale("log")
 plt.xscale("log")
 
 """
-y-values were got from running benchmark script which is higly cost in time,
-so data are saved in this immediate way to be graphed using Matplotlib.
+Algorithms running times were obtained from running `benchmarks.py` script which is expensive,
+so data from a sample run are hard-coded to be graphed using Matplotlib.
 """
 
 plt.plot(x, np.array([3.4599999999995745e-05,
