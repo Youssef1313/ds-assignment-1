@@ -34,4 +34,4 @@ get_times(10000)
 get_times(100000)
 
 for algorithm in algorithms:
-    print(algorithm[0], algorithm[2])
+    print(algorithm[1], algorithm[2])
