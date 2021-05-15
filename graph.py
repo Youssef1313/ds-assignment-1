@@ -56,7 +56,7 @@ plt.plot(x, np.array([0.00020999999999998797,
                       0.012826399999999905,
                       0.13442350000000047,
                       1.5613330999999562]),
-         label='quick_sort_random_pivot')
+         label='Quick sort (random pivot)')
 
 plt.plot(x, np.array([2.980000000002425e-05,
                       0.0005186999999999831,
