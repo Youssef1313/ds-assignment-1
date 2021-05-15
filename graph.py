@@ -35,7 +35,7 @@ plt.plot(x, np.array([2.940000000001275e-05,
                       0.0726116,
                       7.505490299999998,
                       839.1033212999998]),
-         label='insertion_sort')
+         label='Insertion sort')
 
 plt.plot(x, np.array([9.660000000000224e-05,
                       0.0006404999999999883,
