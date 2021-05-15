@@ -12,7 +12,7 @@ plt.yscale("log")
 plt.xscale("log")
 
 """
-values were got from running benchmark script which is higly cost in time,
+y-values were got from running benchmark script which is higly cost in time,
 so data are saved in this immediate way to be graphed using Matplotlib.
 """
 
