@@ -19,8 +19,10 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
+        pip install matplolib
+        pip install numpy
         pip install -r dependencies/dev_requirements.txt
-        pip install dependencies/requirements.txt
+        pip install -r dependencies/requirements.txt
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
