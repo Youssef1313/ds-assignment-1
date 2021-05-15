@@ -41,10 +41,11 @@ To start developing/running locally:
 
     ```
     python -m pip install --upgrade pip
-    pip install -r dependencies/dev_requirements.txt
+    pip install -r dependencies/dev_requirements.txt # OPTIONAL
+    pip install -r dependencies/requirements.txt
     ```
 
-    This will install the required development dependencies (flake8, pytest, and pep8-naming). Those dependencies are defined in [dev_requirements.txt](dependencies/dev_requirements.txt).
+    This will install the [required dependencies](dependencies/requirements.txt) for running the scripts (`numpy` and `matplotlib`) as well as the [required development dependencies](dependencies/dev_requirements.txt) (`flake8`, `pytest`, and `pep8-naming`).
 
 3. Run `pytest` in the root of the repository, you should see all unit tests passing.
 4. Open the directory in VSCode and enjoy!
