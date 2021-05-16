@@ -7,12 +7,12 @@ def get_times(list_length):
     # Mumber range == the number of samples for high chance of duplicates.
     unsorted = str([random.randrange(list_length) for i in range(list_length)])
 
-    for algorithm in algorithms:
+    for algo in algorithms:
         time_in_seconds = timeit.timeit(
-            setup=f"from sorting.{algorithm[0]} import {algorithm[1]}",
-            stmt=f"{algorithm[1]}({unsorted})",
+            setup=f"from sorting.{algo[0]} import {algo[1]}",
+            stmt=f"{algo[1]}({unsorted})",
             number=1)
-        algorithm[2].append(time_in_seconds)
+        algo[2].append(time_in_seconds)
 
 
 # List of tuple, each tuple contains module name, function name, and

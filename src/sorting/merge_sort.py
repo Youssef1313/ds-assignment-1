@@ -1,6 +1,6 @@
 def merge_sort(unsorted):
     if len(unsorted) <= 1:
-        return unsorted
+        return
 
     unsorted_half1, unsorted_half2 = divide(unsorted)
     merge_sort(unsorted_half1)
