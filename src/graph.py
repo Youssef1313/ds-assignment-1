@@ -1,21 +1,16 @@
 from matplotlib import pyplot as plt
 import numpy as np
 
-"""
-Recommended to use Anaconda Environment (Spyder or Jupyter)
-when running this script.
-"""
 
 x = [10, 100, 1000, 10000, 100000]
 
 plt.yscale("log")
 plt.xscale("log")
 
-"""
-Algorithms running times were obtained
-from running `benchmarks.py` script which is expensive,
-so data from a sample run are hard-coded to be graphed using Matplotlib.
-"""
+# Algorithms running times were obtained from running `benchmarks.py`
+# script which is expensive, so data from a sample run are hard-coded
+# to be graphed using Matplotlib.
+
 
 plt.plot(x, np.array([3.4599999999995745e-05,
                       0.001337900000000003,
