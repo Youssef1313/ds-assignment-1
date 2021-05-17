@@ -45,14 +45,16 @@ def graph():
                                   0.008095799999999986,
                                   0.09926670000000115,
                                   1.1763576000003013]
-    plt.plot(x_axis, quick_last_pivot_run_times, label='Quick sort (last pivot)')
+    plt.plot(x_axis, quick_last_pivot_run_times,
+             label='Quick sort (last pivot)')
 
     quick_random_pivot_run_times = [0.00020999999999998797,
                                     0.0010640000000000094,
                                     0.012826399999999905,
                                     0.13442350000000047,
                                     1.5613330999999562]
-    plt.plot(x_axis, quick_random_pivot_run_times, label='Quick sort (random pivot)')
+    plt.plot(x_axis, quick_random_pivot_run_times,
+             label='Quick sort (random pivot)')
 
     selection_run_times = [2.980000000002425e-05,
                            0.0005186999999999831,
