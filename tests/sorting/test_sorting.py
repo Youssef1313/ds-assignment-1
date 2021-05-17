@@ -1,3 +1,4 @@
+import random
 import pytest
 from src.sorting.bubble_sort import bubble_sort
 from src.sorting.heap_sort import heap_sort
@@ -64,6 +65,11 @@ def test_repeated_values(sort_algorithm):
 
 def test_sorting1(sort_algorithm):
     _input = [5, 3, 1, 9, 8, 4, 3, 2, 0, 9, 16, 15, 17]
+    assert_sorted(_input, sort_algorithm)
+
+
+def test_sorting_random_input(sort_algorithm):
+    _input = [random.randrange(10000) for i in range(10000)]
     assert_sorted(_input, sort_algorithm)
 
 
