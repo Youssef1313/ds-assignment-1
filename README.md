@@ -45,9 +45,9 @@ To start developing/running locally:
     pip install -r dependencies/requirements.txt
     ```
 
-    This will install the [required dependencies](dependencies/requirements.txt) for running `benchmark.py` script (`matplotlib`) as well as the [required development dependencies](dependencies/dev_requirements.txt) (`flake8`, `pytest`, and `pep8-naming`).
+    This will install the [required dependencies](dependencies/requirements.txt) for running `graph.py` script as well as the [required development dependencies](dependencies/dev_requirements.txt).
 
-    If you intend to only run `benchmark.py`, you can skip installing the development dependencies.
+    If you intend to only run `graph.py`, you can skip installing the `dev_requirements.txt` and only install `requirements.txt`.
 
 3. Run `pytest` in the root of the repository, you should see all unit tests passing.
 4. Open the directory in VSCode and enjoy!
