@@ -41,11 +41,13 @@ To start developing/running locally:
 
     ```
     python -m pip install --upgrade pip
-    pip install -r dependencies/dev_requirements.txt # OPTIONAL
+    pip install -r dependencies/dev_requirements.txt
     pip install -r dependencies/requirements.txt
     ```
 
-    This will install the [required dependencies](dependencies/requirements.txt) for running the scripts (`numpy` and `matplotlib`) as well as the [required development dependencies](dependencies/dev_requirements.txt) (`flake8`, `pytest`, and `pep8-naming`).
+    This will install the [required dependencies](dependencies/requirements.txt) for running `graph.py` script as well as the [required development dependencies](dependencies/dev_requirements.txt).
+
+    If you intend to only run `graph.py`, you can skip installing the `dev_requirements.txt` and only install `requirements.txt`.
 
 3. Run `pytest` in the root of the repository, you should see all unit tests passing.
 4. Open the directory in VSCode and enjoy!
