@@ -55,5 +55,6 @@ def run_benchmarks():
 
     for algorithm in algorithms:
         print(algorithm[1], algorithm[2])
-        runtimes.add(algorithm[1], algorithm[2]) #  TODO: Nicer display name.
+        # TODO: Nicer display name.
+        runtimes.add(algorithm[1], algorithm[2])
     graph(runtimes)
