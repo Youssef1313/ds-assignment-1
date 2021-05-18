@@ -12,34 +12,25 @@ from sorting.quick_sort import quick_sort_random_pivot
 RUN_BENCHMARKS = "1"
 PLOT_GRAPH = "2"
 SORTING_ARRAY = "3"
-alg_name = ['Bubble Sort',
-            'Insertion Sort',
-            'Selection Sort',
-            'Merge Sort',
-            'Heap Sort',
-            'Quick Sort Last Pivot',
-            'Quick Sort Rnadom Pivot']
+algorithms = {
+    '1': ("Bubble sort", bubble_sort),
+    '2': ("Insertion sort", bubble_sort),
+    '3': ("Selection sort", bubble_sort),
+    '4': ("Merge sort", bubble_sort),
+    '5': ("Heap sort", bubble_sort),
+    '6': ("Quick sort last pivot", bubble_sort),
+    '7': ("Quick sort random  pivot", bubble_sort),
+    
+}
 
 
-def show_alg(i, st):
-    print(i, " : ", st)
+def show_alg(i):
+    print(i, " : ", algorithms[i][0])
 
 
 def sort_alg(op, arr):
-    if op == '1':
-        bubble_sort(arr)
-    elif op == '2':
-        insertion_sort(arr)
-    elif op == '3':
-        selection_sort(arr)
-    elif op == '4':
-        merge_sort(arr)
-    elif op == '5':
-        heap_sort(arr)
-    elif op == '6':
-        quick_sort_last_pivot(arr)
-    elif op == '7':
-        quick_sort_random_pivot(arr)
+    alg = algorithms[op][1]
+    alg(arr)
     print(arr)
 
 
@@ -56,14 +47,14 @@ if __name__ == '__main__':
         graph()
     elif option == SORTING_ARRAY:
         print("Select an option:")
-        for i in range(len(alg_name)):
-            show_alg(i, alg_name[i])
+        for i in range(len(algorithms)):
+            show_alg(i)
         opt = input()
         try:
             print('Enter your array numbers')
             arr_nums = list(map(int, input().split()))
-            sort_alg(opt,arr_nums)
-        except: 
+            sort_alg(opt, arr_nums)
+        except:
             print('Enter Valid Number !')
         
     else:
