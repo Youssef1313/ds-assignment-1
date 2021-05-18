@@ -27,8 +27,8 @@ def show_alg(ind):
     print(ind, ": ", algorithms[ind][0])
 
 
-def sort_alg(op, arr):
-    alg = algorithms[op][1]
+def sort_alg(alg_num, arr):
+    alg = algorithms[alg_num][1]
     alg(arr)
     print(arr)
 
