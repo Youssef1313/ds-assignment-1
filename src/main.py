@@ -56,6 +56,5 @@ if __name__ == '__main__':
             sort_alg(opt, arr_nums)
         except:
             print('Enter Valid Number !')
-        
     else:
         print("Unexpected input entered. Terminating the script.")
