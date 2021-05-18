@@ -18,14 +18,13 @@ algorithms = {
     '3': ("Selection sort", selection_sort),
     '4': ("Merge sort", merge_sort),
     '5': ("Heap sort", heap_sort),
-    '6': ("Quick sort last pivot", quick_sort_last_pivot),
-    '7': ("Quick sort random  pivot", quick_sort_random_pivot),
-    
+    '6': ("Quick sort (last pivot)", quick_sort_last_pivot),
+    '7': ("Quick sort (random  pivot)", quick_sort_random_pivot),
 }
 
 
 def show_alg(i):
-    print(i, " : ", algorithms[i][0])
+    print(i, ": ", algorithms[i][0])
 
 
 def sort_alg(op, arr):
@@ -54,7 +53,7 @@ if __name__ == '__main__':
             print('Enter your array numbers')
             arr_nums = list(map(int, input().split()))
             sort_alg(opt, arr_nums)
-        except:
+        except ValueError:
             print('Enter Valid Number !')
     else:
         print("Unexpected input entered. Terminating the script.")
