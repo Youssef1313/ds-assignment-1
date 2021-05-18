@@ -1,6 +1,9 @@
 import random
 import timeit
 
+from algorithms_runtimes import AlgorithmsRuntimes
+from graph import graph
+
 
 def _get_times(list_length, algorithms, is_sorted):
     # For numbers from 0 to list_length - 1, select list_length random numbers.
@@ -45,11 +48,12 @@ def run_benchmarks():
         print("Unexpected value. Terminating the program.")
         return
 
-    _get_times(10, algorithms, is_sorted)
-    _get_times(100, algorithms, is_sorted)
-    _get_times(1000, algorithms, is_sorted)
-    _get_times(10000, algorithms, is_sorted)
-    _get_times(100000, algorithms, is_sorted)
+    x_axis = [10, 100, 1000, 10000, 100000]
+    runtimes = AlgorithmsRuntimes(x_axis)
+    for input_size in x_axis:
+        _get_times(input_size, algorithms, is_sorted)
 
     for algorithm in algorithms:
         print(algorithm[1], algorithm[2])
+        runtimes.add(algorithm[1], algorithm[2]) #  TODO: Nicer display name.
+    graph(runtimes)
