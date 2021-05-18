@@ -14,12 +14,12 @@ PLOT_GRAPH = "2"
 SORTING_ARRAY = "3"
 algorithms = {
     '1': ("Bubble sort", bubble_sort),
-    '2': ("Insertion sort", bubble_sort),
-    '3': ("Selection sort", bubble_sort),
-    '4': ("Merge sort", bubble_sort),
-    '5': ("Heap sort", bubble_sort),
-    '6': ("Quick sort last pivot", bubble_sort),
-    '7': ("Quick sort random  pivot", bubble_sort),
+    '2': ("Insertion sort", insertion_sort),
+    '3': ("Selection sort", selection_sort),
+    '4': ("Merge sort", merge_sort),
+    '5': ("Heap sort", heap_sort),
+    '6': ("Quick sort last pivot", quick_sort_last_pivot),
+    '7': ("Quick sort random  pivot", quick_sort_random_pivot),
     
 }
 
