@@ -23,8 +23,8 @@ algorithms = {
 }
 
 
-def show_alg(i):
-    print(i, ": ", algorithms[i][0])
+def show_alg(ind):
+    print(ind, ": ", algorithms[ind][0])
 
 
 def sort_alg(op, arr):
