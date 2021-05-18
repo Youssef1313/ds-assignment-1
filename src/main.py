@@ -1,3 +1,4 @@
+from algorithms_runtimes import AlgorithmsRuntimes
 from benchmarks import run_benchmarks
 from graph import graph
 from sorting.bubble_sort import bubble_sort
@@ -43,7 +44,7 @@ if __name__ == '__main__':
     if option == RUN_BENCHMARKS:
         run_benchmarks()
     elif option == PLOT_GRAPH:
-        graph()
+        graph(AlgorithmsRuntimes.get_static_data())
     elif option == SORTING_ARRAY:
         print("Select an option:")
         for i in range(len(algorithms)):
