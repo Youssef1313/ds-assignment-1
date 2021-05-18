@@ -55,6 +55,7 @@ def run_benchmarks():
 
     for algorithm in algorithms:
         print(algorithm[1], algorithm[2])
+        # pylint: disable=W0511
         # TODO: Nicer display name.
         runtimes.add(algorithm[1], algorithm[2])
     graph(runtimes)
