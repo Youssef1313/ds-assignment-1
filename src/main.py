@@ -24,8 +24,8 @@ algorithms = {
 }
 
 
-def show_alg(ind):
-    print(ind, ": ", algorithms[ind][0])
+def show_algorithm(key):
+    print(key, ": ", algorithms[key][0])
 
 
 def sort_alg(alg_num, arr):
@@ -47,11 +47,11 @@ if __name__ == '__main__':
         graph(AlgorithmsRuntimes.get_static_data())
     elif option == SORTING_ARRAY:
         print("Select an option:")
-        for i in range(len(algorithms)):
-            show_alg(i)
+        for algorithm in algorithms:
+            show_algorithm(algorithm)
         opt = input()
         try:
-            print('Enter your array numbers')
+            print('Enter numbers separated by spaces')
             arr_nums = list(map(int, input().split()))
             sort_alg(opt, arr_nums)
         except ValueError:
