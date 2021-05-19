@@ -52,7 +52,7 @@ if __name__ == '__main__':
         opt = input()
         try:
             print('Enter numbers separated by spaces')
-            arr_nums = list(map(int, input().split()))
+            arr_nums = [*map(int, input().split())]
             sort_alg(opt, arr_nums)
         except ValueError:
             print('Enter Valid Number !')
