@@ -67,7 +67,3 @@ To start developing/running locally:
     1. Run benchmarks - this will then give you the option to either run *all the algorithms* (which can take LOTS of time) against random list (average case scenario), or a sorted list (best case scenario). The algorithms will be run against list lengths of 10, 100, 1000, 10000, 100000. You can change that in `benchmarks.py` by modifying `x_axis` variable. After that, it will show the plot.
     2. Plot the graph on hard-coded data sample - this will show a sample plot without having to wait for benchmarks.
     3. Sorting input array - this allows you to give an input of your choice to a specific algorithm.
-
-### Important notes
-
-- Running benchmarks against a sorted input is much faster, however, the quick sort algorithm will fail causing the program to crash with a stack overflow on large lists.
