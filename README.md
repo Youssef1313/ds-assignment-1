@@ -70,4 +70,4 @@ To start developing/running locally:
 
 ### Important notes
 
-- Running benchmarks against a sorted input is much faster, however, the quick sort algorithm will fail causing the program to crash with a stack overflow.
+- Running benchmarks against a sorted input is much faster, however, the quick sort algorithm will fail causing the program to crash with a stack overflow on large lists.
