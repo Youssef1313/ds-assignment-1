@@ -8,7 +8,7 @@ from graph import graph
 def _get_times(list_length, algorithms, is_sorted):
     # For numbers from 0 to list_length - 1, select list_length random numbers.
     # Mumber range == the number of samples for high chance of duplicates.
-    unsorted_list = [random.randrange(list_length) for i in range(list_length)]
+    unsorted_list = [random.randrange(list_length) for _ in range(list_length)]
     if is_sorted:
         unsorted_list.sort()
     unsorted = str(unsorted_list)
