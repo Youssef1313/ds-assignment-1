@@ -1,14 +1,11 @@
 import random
-import sys
 
 
 def quick_sort_last_pivot(arr):
-    sys.setrecursionlimit(1000000)
     __quick_sort(arr, 0, len(arr), __get_pivot_last)
 
 
 def quick_sort_random_pivot(arr):
-    sys.setrecursionlimit(1000000)
     __quick_sort(arr, 0, len(arr), __get_pivot_random)
 
 
