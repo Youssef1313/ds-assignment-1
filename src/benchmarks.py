@@ -48,7 +48,8 @@ def run_benchmarks():
         print("Unexpected value. Terminating the program.")
         return
 
-    x_axis = [10, 100, 1000, 10000, 100000]
+    # x_axis = [10, 100, 1000, 10000, 100000]
+    x_axis = [i for i in range(0, 2000, 10)]
     runtimes = AlgorithmsRuntimes(x_axis)
     for input_size in x_axis:
         _get_times(input_size, algorithms, is_sorted)
