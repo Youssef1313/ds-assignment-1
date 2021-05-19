@@ -1,11 +1,17 @@
 import random
 import timeit
 
+from algorithms_runtimes import AlgorithmsRuntimes
+from graph import graph
 
-def _get_times(list_length, algorithms):
+
+def _get_times(list_length, algorithms, is_sorted):
     # For numbers from 0 to list_length - 1, select list_length random numbers.
     # Mumber range == the number of samples for high chance of duplicates.
-    unsorted = str([random.randrange(list_length) for i in range(list_length)])
+    unsorted_list = [random.randrange(list_length) for i in range(list_length)]
+    if is_sorted:
+        unsorted_list.sort()
+    unsorted = str(unsorted_list)
     print(f"Started executing on list of length {list_length}")
     for algorithm in algorithms:
         print(f"Started {algorithm[1]}.")
@@ -32,11 +38,24 @@ def run_benchmarks():
         ("selection_sort", "selection_sort", []),
     ]
 
-    _get_times(10, algorithms)
-    _get_times(100, algorithms)
-    _get_times(1000, algorithms)
-    _get_times(10000, algorithms)
-    _get_times(100000, algorithms)
+    print("Enter 1 to run against random list or 2 to run against sorted list")
+    user_option = input()
+    if user_option == "1":
+        is_sorted = False
+    elif user_option == "2":
+        is_sorted = True
+    else:
+        print("Unexpected value. Terminating the program.")
+        return
+
+    x_axis = [10, 100, 1000, 10000, 100000]
+    runtimes = AlgorithmsRuntimes(x_axis)
+    for input_size in x_axis:
+        _get_times(input_size, algorithms, is_sorted)
 
     for algorithm in algorithms:
         print(algorithm[1], algorithm[2])
+        # pylint: disable=W0511
+        # TODO: Nicer display name.
+        runtimes.add(algorithm[1], algorithm[2])
+    graph(runtimes)
